@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea's homepage - v2.0.0</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!-- fontawesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+    <!-- 播放器文件调用 -->
+    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <!-- <div class="dark"> -->
+    <!-- 导航 -->
+    <div class="nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <div class="nav_c">
+            <a href="./">首页</a>
+            <a href="https://blog.lea.ink/">博客</a>
+            <a href="./bibi.html">哔哔</a>
+            <a href="./photo.html">相册</a>
+            <a href="./1.0/index.html">1.0版本</a>
+            <button target="_self" class="about" onclick="window.location='./about.html'">关 于</button>
+        </div>
+    </div>
+
+    <!-- 手机导航 -->
+    <div class="m-nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <button onclick="mnav()"><i class="fas fa-align-justify"></i> </button>
+    </div>
+    <div class="m-nav_c" id="m-nav_c">
+        <a href="./"><i class="fas fa-home"></i> 首页</a>
+        <a href="https://blog.lea.ink/"><i class="fas fa-blog"></i> 博客</a>
+        <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
+        <a href="./photo.html"><i class="fas fa-images"></i> 相册</a>
+        <a href="./1.0/index.html"><i class="fas fa-history"></i> 1.0版本</a>
+    </div>
+
+
+    <!-- 主体 -->
+    <div class="main">
+
+        <!-- 电脑文字 -->
+        <div id="title">
+            <span class="flip">L</span>
+            <span class="flip">e</span>
+            <span class="flip">a</span>
+            <span class="flip">'</span>
+            <span class="flip">s</span>
+            <br>
+            <span class="flip">H</span>
+            <span class="flip">o</span>
+            <span class="flip">m</span>
+            <span class="flip">e</span>
+            <span class="flip">p</span>
+            <span class="flip">a</span>
+            <span class="flip">g</span>
+            <span class="flip">e</span>
+        </div>
+
+        <!-- 手机文字头像 -->
+        <div id="m-title">
+
+            <div class="qqtx">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=553344777&site=qq&menu=yes" title="打开QQ对话">
+                    <img src="http://q1.qlogo.cn/g?b=qq&nk=553344777&s=5" alt="qq头像">
+                </a>
+            </div>
+
+            <span>Lea.</span>
+
+        </div>
+        <div id="text"> </div>
+
+        <!-- 电脑联系按钮 -->
+        <div class="contact">
+            <a class="qq" href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> &nbsp;添加QQ</a>
+            <a class="wechat" href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> &nbsp;添加微信</a>
+            <a class="mail" href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> &nbsp;发送邮件</a>
+        </div>
+
+        <!-- 手机联系按钮 -->
+        <div class="m-contact">
+            <a class="qq" href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> &nbsp;Q Q</a>
+            <a class="wechat" href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> &nbsp;微 信</a>
+            <a class="mail" href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> &nbsp;邮 件</a>
+            <a class="me" href="./about.html"><img src="./img/me.svg" alt="me"> &nbsp;关 于</a>
+        </div>
+    </div>
+
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p> © 2021 by Lea.</p>
+        <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
+    </footer>
+
+
+    <!-- </div> -->
+
+
+    <!-- 播放器配置 -->
+    <meting-js server="tencent" type="playlist" autoplay="false" id="7903334636" volume=0.5 fixed="true">
+    </meting-js>
+
+
+</body>
+
+
+<!-- 打字js -->
+<script>
+    document.querySelectorAll('span').forEach((span, index) => {
+        span.style.setProperty('--delay', `${index * 0.1}s`)
+    })
+    let d = document.getElementById('text')
+    let i = 0,
+        timer = 0,
+        line = 0;
+    str = ['Never forget to think!', '不积跬步，无以至千里；不积小流，无以成江海。', '世间本无事，庸人自扰之。', '好记性不如烂笔头。', '愿你走出半生，归来仍是少年。']
+    line = 0
+        // 输入
+    function typing() {
+        if (i < str[line].length) {
+            d.innerHTML = str[line].slice(0, i++)
+            setTimeout(typing, 200)
+        } else {
+            d.innerHTML = str[line]
+            setTimeout(re_typing, 2000)
+        }
+    }
+    // 删除
+    function re_typing() {
+        if (i > 0) {
+            d.innerHTML = str[line].slice(0, i--)
+            setTimeout(re_typing, 50)
+        } else {
+            if (line == str.length - 1) {
+                line = 0
+            } else {
+                line += 1
+            }
+            d.innerHTML = ''
+            setTimeout(typing, 1000)
+        }
+    }
+
+    typing()
+</script>
+
+
+</html>

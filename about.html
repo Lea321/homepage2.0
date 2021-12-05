@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea's homepage - v2.0.0</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!-- fontawesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+    <!-- 播放器文件调用 -->
+    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <div class="nav_c">
+            <a href="./">首页</a>
+            <a href="https://blog.lea.ink/">博客</a>
+            <a href="./bibi.html">哔哔</a>
+            <a href="./photo.html">相册</a>
+            <a href="/1.0/index.html">1.0版本</a>
+            <button target="_self" class="about" onclick="window.open('./about.html')">关 于</button>
+        </div>
+    </div>
+
+    <!-- 手机导航 -->
+    <div class="m-nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <button onclick="mnav()"><i class="fas fa-align-justify"></i></button>
+    </div>
+    <div class="m-nav_c" id="m-nav_c">
+        <a href="./"><i class="fas fa-home"></i> 首页</a>
+        <a href="https://blog.lea.ink/"><i class="fas fa-blog"></i> 博客</a>
+        <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
+        <a href="./photo.html"><i class="fas fa-images"></i> 相册</a>
+        <a href="/1.0/index.html"><i class="fas fa-history"></i> 1.0版本</a>
+    </div>
+
+    <!-- 主体 -->
+    <div class="about_body">
+        <img class="page-title" src="./img/about.png">
+        <p class="page-sub">🍭 欢迎你的来访 🍭</p><br>
+
+        <div class="content">
+            <div class="c_title">🚩<span> 公告</span></div>
+            <div class="c_content">
+                <p>🔹该网站写的比较仓促，如果有bug啥的还望谅解。 </p>
+                <p>🔹后期会随着需求以及本人技术的提升慢慢进行优化，希望大佬不要嘲笑。 </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="c_title">👨‍💻<span> 关于我</span></div>
+            <div class="c_content">
+                <p>🔹性别：男 <br> </p>
+                <p>🔹祖籍：河南商丘 <br> </p>
+                <p>🔹爱好：吹牛逼，吃美食，看美女😍。是一名数字爱好者，喜欢漂亮的数字。<br> </p>
+                <p>🔹性格：三分热度，我爸从小就说我一瓶子不满，半瓶子晃荡。啥都会点，又啥都不会。 </p>
+                <p>🔹座右铭：能(白)嫖不(白)嫖非人也。</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="c_title">👑<span> 关于本站<span></div>
+            <div class="c_content">
+                <p>🔹该网站是我写的第二个 个人主页，第一个是 <a href="./1.0/index.html">1.0版本</a> ，一直都想写2.0版本的，但是因为种种原因一直没写，正好趁着web结课作业写一下。 </p>
+                <p>🔹2.0版本是在 2021.1202 开始写的，是一个很不错的数字，在此记录下来。</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 页脚 -->
+    <footer class="page-footer">
+        <p> © 2021 by Lea.</p>
+        <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
+    </footer>
+
+
+    <!-- 播放器配置 -->
+    <meting-js server="tencent" type="playlist" autoplay="false" id="7903334636" volume=0.5 fixed="true">
+    </meting-js>
+
+
+</body>
+
+</html>

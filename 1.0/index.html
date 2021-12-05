@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- 标题 -->
+    <title>Lea's homepage.</title>
+    <meta itemprop="name" content="Lea's homepage">
+    <meta itemprop="Description" content="Nover forget to think.">
+    <meta itemprop="image" content="http://q1.qlogo.cn/g?b=qq&nk=553344777&s=5">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 user-scalable=no">
+    <!-- 播放器文件调用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- 头像 -->
+        <div class="logo">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=553344777&site=qq&menu=yes" title="打开QQ对话">
+                <img src="http://q1.qlogo.cn/g?b=qq&nk=553344777&s=5" alt="qq头像">
+            </a>
+        </div>
+
+        <!-- 名字 -->
+        <div class="name">Lea</div>
+
+        <!-- 介绍 -->
+        <div class="introduce">Nover forget to think</div>
+
+        <!-- 公告 -->
+        <div class="add" onclick="gg()">
+            <i class="fa fa-bullhorn"></i> &nbsp;点击查看公告
+        </div>
+
+        <!-- 图标 -->
+        <div class="icon">
+            <a href="https://res.abeim.cn/api/qq/?qq=553344777">
+                <img src="./img/qq.png" alt="qq" title="添加QQ好友">
+            </a>
+
+            <a onclick="wechat()">
+                <img src="./img/wechat.png" alt="wechat" title="添加微信好友">
+            </a>
+
+            <a href="tel:13148016205">
+                <img src="./img/phone.png" alt="home" title="拨打电话">
+            </a>
+
+            <a href="mailto:553344777@qq.com">
+                <img src="./img/mail.png" alt="mail" title="发送邮件">
+            </a>
+        </div>
+
+    </div>
+
+    <!-- 播放器配置 -->
+    <meting-js server="tencent" type="playlist" autoplay="true" id="7903334636" volume=0.5 fixed="true">
+    </meting-js>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2021 by Lea.</p>
+        <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
+    </footer>
+
+    <!-- 脚本 -->
+    <script>
+        function wechat() {
+            alert("微信：Li-18181\n备用：7344437");
+        }
+
+        function gg() {
+            alert("暂无内容");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea's homepage - v2.0.0</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!-- fontawesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+    <!-- 播放器文件调用 -->
+    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <div class="nav_c">
+            <a href="./">首页</a>
+            <a href="https://blog.lea.ink/">博客</a>
+            <a href="./bibi.html">哔哔</a>
+            <a href="./photo.html">相册</a>
+            <a href="/1.0/index.html">1.0版本</a>
+            <button target="_self" class="about" onclick="window.open('./about.html')">关 于</button>
+        </div>
+    </div>
+
+    <!-- 手机导航 -->
+    <div class="m-nav">
+        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <button onclick="mnav()"><i class="fas fa-align-justify"></i></button>
+    </div>
+    <div class="m-nav_c" id="m-nav_c">
+        <a href="./"><i class="fas fa-home"></i> 首页</a>
+        <a href="https://blog.lea.ink/"><i class="fas fa-blog"></i> 博客</a>
+        <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
+        <a href="./photo.html"><i class="fas fa-images"></i> 相册</a>
+        <a href="/1.0/index.html"><i class="fas fa-history"></i> 1.0版本</a>
+    </div>
+
+    <!-- 哔哔 -->
+    <div class="bibi">
+        <img class="page-title" src="./img/bibi.png">
+        <p class="page-sub">🍭 欢迎你的来访 🍭</p><br>
+
+        <div id='speak'>
+            </speak>
+            <!-- 使用markdown渲染 -->
+            <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
+            <!-- 不使用markdown渲染 -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
+            <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
+            <!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script> -->
+            <script>
+                ispeakBber
+                    .init({
+                        el: '#speak', // 容器选择器
+                        name: 'Lea 🦄', // 显示的昵称
+                        envId: 'blog-5gglurk899356494', // 环境id
+                        region: 'ap-shanghai', // 腾讯云地址，默认为上海
+                        limit: 10, // 每次加载的条数，默认为5
+                        avatar: 'https://q1.qlogo.cn/g?b=qq&nk=553344777&s=640',
+                        fromColor: 'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
+                        loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
+                        dbName: 'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
+                    })
+                    .then(function() {
+                        // 哔哔加载完成后的回调函数，你可以写你自己的功能
+                        console.log('哔哔 加载完成')
+                    })
+            </script>
+        </div>
+
+    </div>
+
+
+    <!-- 页脚 -->
+    <footer class="page-footer">
+        <p> © 2021 by Lea.</p>
+        <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
+    </footer>
+
+
+    <!-- 播放器配置 -->
+    <meting-js server="tencent" type="playlist" autoplay="false" id="7903334636" volume=0.5 fixed="true">
+    </meting-js>
+
+
+</body>
+
+</html>

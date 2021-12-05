@@ -1,0 +1,605 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* border: red 1px solid; */
+    font-family: 'Century Gothic';
+}
+
+body {
+    /* display: block;
+    height: 100vh;
+    width: 100%;
+    z-index: -999; */
+    background-image: url(http://cdn.jsdelivr.net/gh/Lea321/lea_img/img/post/bg1.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 隐藏 */
+
+.m-contact,
+.m-nav,
+.m-nav_c,
+#m-title {
+    display: none;
+}
+
+
+/* 字体 */
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url(../font/GOTHIC.TTF);
+}
+
+
+/* 背景加黑 */
+
+.dark {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -999;
+}
+
+
+/* 导航 */
+
+.nav {
+    font-family: 'Courier New', Courier, monospace;
+    height: 4rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 导航栏 */
+
+.nav_c {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav_c a {
+    border-radius: 1rem;
+    padding: .2rem 1rem;
+}
+
+.nav_c a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 1s;
+}
+
+
+/* 导航logo */
+
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+}
+
+
+/* 关于我按钮 */
+
+.about {
+    cursor: pointer;
+    color: white;
+    font-size: 1.3rem;
+    padding: .2rem 1.2rem;
+    border-radius: 1rem;
+    border: 0;
+    background-color: rgb(34, 179, 204, .6);
+}
+
+.about:hover {
+    transition: .5s;
+    background-color: rgba(0, 217, 255, 0.7);
+}
+
+
+/* 主体 */
+
+.main {
+    color: white;
+    padding: 10% 0 0 10%;
+}
+
+#title {
+    cursor: pointer;
+    width: 40rem;
+}
+
+#title span {
+    margin: 0;
+    font-size: 6.5rem;
+    display: inline-block;
+    animation: 5s flip infinite;
+    animation-delay: var(--delay);
+}
+
+#text {
+    width: 70%;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+}
+
+#text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+
+/* 联系按钮开始 */
+
+.contact {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.contact a {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem 0 0;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    animation: big 2s linear infinite;
+}
+
+.contact img {
+    width: 2rem;
+}
+
+.qq,
+.wechat,
+.mail,
+.me {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.qq:hover,
+.wechat:hover,
+.mail:hover,
+.me:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .3s;
+}
+
+.wechat img {
+    width: 2.2rem;
+}
+
+.mail img {
+    border-radius: .5rem;
+}
+
+
+/* 哔哔 */
+
+.page-title {
+    height: 2.5rem;
+    margin-bottom: 1%;
+}
+
+.bibi,
+.photo,
+.about_body {
+    text-align: center;
+    width: 50%;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    margin: 3% auto 2% auto;
+}
+
+.page-sub {
+    font-size: 1.3rem;
+}
+
+
+/* 哔哔微调 */
+
+.xk-card-content {
+    text-align: left;
+}
+
+.xk-card-content a {
+    white-space: initial;
+}
+
+.xk-card-content img {
+    width: 50%;
+    margin: 2px auto;
+}
+
+.xk-footer {
+    display: none;
+}
+
+
+/* 弹窗显示 */
+
+#Big {
+    display: none;
+    position: fixed;
+    background-color: rgba(80, 79, 79, 0.774);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+#Big img {
+    border: .5rem white solid;
+    margin-top: 10vh;
+    height: 80vh;
+}
+
+
+/* 切换图片按钮 */
+
+#button-right,
+#button-left {
+    top: 45vh;
+    position: fixed;
+    width: 10vh;
+    height: 10vh;
+    text-align: center;
+    z-index: 5;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 7vh;
+    color: white;
+}
+
+#button-left {
+    left: 20vh;
+}
+
+#button-right {
+    right: 20vh;
+}
+
+.text {
+    color: white;
+    letter-spacing: 3vh;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 6vh;
+}
+
+
+/* 相册 */
+
+.imgbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imgbox span {
+    margin-top: 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 24%;
+    height: 9rem;
+    box-shadow: 0 0 .3rem .1rem rgba(0, 0, 0, .3);
+}
+
+.imgbox span img {
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.imgbox span:hover {
+    box-shadow: 0px .8rem 1rem rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    transform: scale(1.2, 1.2);
+}
+
+.about_body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_body a {
+    color: #00688B;
+}
+
+.about_body a:hover {
+    color: purple;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.c_title {
+    width: 100%;
+    font-family: 微软雅黑;
+    padding: .2rem 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    background-color: #b9d3ee;
+    border-left: .5rem solid #1874cd;
+    border-radius: .3rem;
+    box-shadow: 0 .2rem .2rem .1rem rgba(0, 0, 0, .3);
+}
+
+.c_content {
+    line-height: 2rem;
+    width: 85%;
+    text-align: left;
+    margin: .5rem 0 1rem 0;
+}
+
+
+/* 页脚 */
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-family: 'sans-serif';
+    letter-spacing: 0.3rem;
+    line-height: 2.2rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.page-footer {
+    width: 100%;
+    position: relative;
+    font-family: 'sans-serif';
+    letter-spacing: 0.3rem;
+    line-height: 2.2rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+/* 自适应 */
+
+
+/* 自适应 */
+
+
+/* 自适应 */
+
+
+/* 自适应 */
+
+
+/* 自适应 */
+
+@media (min-width: 850px) and (max-width: 1150px) {
+    #text {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    /* 隐藏 */
+    .nav,
+    #title,
+    .contact {
+        display: none;
+    }
+    /* 显示 */
+    #m-title {
+        display: block;
+    }
+    .main {
+        padding: 0;
+        text-align: center;
+        margin-top: 13%;
+    }
+    .m-nav {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* .logo {
+        font-size: 2.5rem;
+        margin: .5rem 0 0 1rem;
+    } */
+    .logo {
+        height: 100%;
+        margin-left: .5rem;
+    }
+    .logo img {
+        height: 100%;
+    }
+    .m-nav button {
+        width: 2.7rem;
+        height: 2.7rem;
+        background: rgba(0, 0, 0, 0.4);
+        background: none;
+        color: white;
+        border: none;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .qqtx {
+        width: 8rem;
+        height: 8rem;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 0 0 .35rem rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+    }
+    .qqtx img {
+        transition: 1s;
+        width: 100%;
+    }
+    .qqtx:hover img {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    #m-title span {
+        padding-left: 1rem;
+        display: block;
+        font-size: 3.4rem;
+        letter-spacing: .3rem;
+    }
+    #text {
+        width: 90%;
+        margin: auto;
+        font-size: 1.5rem;
+        letter-spacing: .3rem;
+    }
+    .m-contact {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .m-contact a {
+        margin: 1rem 0 0 0;
+        font-size: 1rem;
+        border-radius: .5rem;
+        width: 26%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: big 2s linear infinite;
+    }
+    .m-contact img {
+        width: 1.7rem;
+    }
+    .wechat img {
+        width: 1.8rem;
+    }
+    .mail img {
+        width: 1.6rem;
+    }
+    .footer .page-footer {
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+    .m-nav_c {
+        width: 100%;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        height: 2rem;
+        border-radius: .5rem;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .bibi,
+    .about_body,
+    .photo {
+        margin-top: 10%;
+        width: 80%;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .page-sub {
+        font-size: 1.2rem;
+    }
+    .imgbox span {
+        width: 48%;
+        height: 6rem;
+    }
+    .content {
+        width: 90%;
+    }
+    .c_title {
+        font-size: 1.1rem;
+        padding-left: .5rem;
+    }
+}
+
+
+/* 动画 */
+
+
+/* 动画 */
+
+
+/* 动画 */
+
+
+/* 动画 */
+
+
+/* 动画 */
+
+
+/* 光标 */
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* 放大 */
+
+@keyframes big {
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 旋转动画 */
+
+@keyframes flip {
+    0%,
+    10% {
+        transform: rotateY(0deg);
+    }
+    5% {
+        transform: rotateY(90deg);
+    }
+    10%,
+    100% {}
+}

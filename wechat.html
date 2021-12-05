@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/wechat.ico" type="image/x-icon">
+    <title>wechat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #ededed;
+        }
+        
+        .card {
+            width: 17%;
+            height: auto;
+            margin: 10% auto;
+            padding: 1.5rem 1rem 1rem;
+            overflow: hidden;
+            transition: 0.6s;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+        }
+        
+        .tx {
+            width: 4.7rem;
+            border-radius: .5rem;
+        }
+        
+        .name {
+            font-size: 1.5rem;
+            padding: 10px
+        }
+        
+        .address {
+            font-size: 1.2rem;
+            padding: 10px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .ma {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .sys {
+            padding: 1rem;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .xx {
+            float: left;
+            padding: 1.1rem 0 0 .2rem;
+            text-align: left;
+        }
+        
+        @media only screen and (max-width:479px) {
+            .card {
+                width: 80%;
+                margin-top: 30%;
+            }
+        }
+        
+        @media (min-width:480px) and (max-width:1024px) {
+            .card {
+                width: 80%;
+            }
+        }
+        
+        @media (min-width:1025px) and (max-width:1300px) {
+            .card {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div style="float: left;">
+            <img class="tx" src="img/w.jpg" alt="头像">
+        </div>
+        <div class="xx">
+            <span class="name">Lea.</span>
+            <img width="17rem" src="img/man.png"><br>
+            <span class="address">河南 商丘</span>
+        </div>
+        <br>
+        <img class="ma" src="img/QRcode.png" alt="二维码">
+        <p class="sys">扫一扫上面的二维码图案，加我微信</p>
+    </div>
+</body>
+
+</html>
