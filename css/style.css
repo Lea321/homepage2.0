@@ -393,6 +393,25 @@ a {
     text-align: center;
 }
 
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #4186f5; */
+    width: 10rem;
+    margin: auto;
+    /* border: 1px solid red; */
+    height: 1.5rem;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, .3);
+    padding: .2rem;
+}
+
+.github img {
+    height: 100%;
+    margin-right: .5rem;
+}
+
 
 /* 自适应 */
 
