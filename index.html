@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lea's homepage - v2.0.0</title>
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +11,7 @@
     <!-- fontawesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
     <!-- 播放器文件调用 -->
-    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 </head>
@@ -36,7 +35,7 @@
     <!-- 手机导航 -->
     <div class="m-nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
-        <button onclick="mnav()"><i class="fas fa-align-justify"></i> </button>
+        <button onclick="mnav()"><i class="fas fa-align-justify"  title="菜单"></i> </button>
     </div>
     <div class="m-nav_c" id="m-nav_c">
         <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
@@ -72,8 +71,8 @@
         <div id="m-title">
 
             <div class="qqtx">
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=553344777&site=qq&menu=yes" title="打开QQ对话">
-                    <img src="http://q1.qlogo.cn/g?b=qq&nk=553344777&s=5" alt="qq头像">
+                <a href="https://wpa.qq.com/msgrd?v=3&uin=553344777&site=qq&menu=yes" title="打开QQ对话">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5" alt="qq头像">
                 </a>
             </div>
 
@@ -103,7 +102,7 @@
     <footer class="footer">
         <p> © 2021 by Lea.</p>
         <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
-        <a class="github" href="https://github.com/Lea321/homepage2.0"><img src="./img/GitHub.svg"></img> github</a>
+        <a class="github" href="https://github.com/Lea321/homepage2.0"><img src="./img/GitHub.svg" title="Github"></img> github</a>
     </footer>
 
 
@@ -111,7 +110,7 @@
 
 
     <!-- 播放器配置 -->
-    <meting-js server="tencent" type="playlist" autoplay="false" id="7903334636" volume=0.5 fixed="true">
+    <meting-js server="tencent" type="playlist" autoplay="true" id="7903334636" volume=0.5 fixed="true">
     </meting-js>
 
 

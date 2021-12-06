@@ -14,7 +14,7 @@ function mnav() {
 // 大图弹窗
 function open_big(x) {
     document.getElementById('bigimg').src = 'img/' + x + '.jpg';
-    document.getElementById("Big").style.display = "block";
+    document.getElementById("Big").style.display = "flex";
     a = x;
     return a;
 }

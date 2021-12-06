@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lea's homepage - v2.0.0</title>
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +11,7 @@
     <!-- fontawesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
     <!-- 播放器文件调用 -->
-    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 </head>
@@ -35,7 +34,7 @@
     <!-- 手机导航 -->
     <div class="m-nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
-        <button onclick="mnav()"><i class="fas fa-align-justify"></i> </button>
+        <button onclick="mnav()"><i class="fas fa-align-justify"  title="菜单"></i> </button>
     </div>
     <div class="m-nav_c" id="m-nav_c">
         <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
@@ -48,13 +47,15 @@
 
     <!-- 弹窗显示内容 -->
     <div id="Big">
-        <!-- 上一张图 -->
-        <div id="button-left" onclick="change_left()"><i class="fa fa-angle-left"></i></div>
-        <!-- 下一张图 -->
-        <div id="button-right" onclick="change_right()"><i class="fa fa-angle-right"></i></div>
-        <!-- 弹窗显示图片 -->
-        <img id="bigimg" onclick="close_big()" src="">
-        <p class="text">点击图片关闭弹窗</p>
+        <div class="big_c">
+            <!-- 上一张图 -->
+            <div id="button-left" onclick="change_left()"><i class="fa fa-angle-left"></i></div>
+            <!-- 下一张图 -->
+            <div id="button-right" onclick="change_right()"><i class="fa fa-angle-right"></i></div>
+            <!-- 弹窗显示图片 -->
+            <p class="text">点击图片关闭弹窗</p>
+            <img id="bigimg" onclick="close_big()" src="" title="大图效果">
+        </div>
     </div>
 
 
