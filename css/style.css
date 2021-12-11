@@ -115,7 +115,7 @@ a {
 
 .main {
     color: white;
-    padding: 10% 0 0 10%;
+    padding: 7% 0 0 10%;
 }
 
 #title {
@@ -445,6 +445,28 @@ a {
     .imgbox span {
         width: 31%;
         height: 6rem;
+    }
+    .footer,
+    .page-footer {
+        letter-spacing: 0.1rem;
+        line-height: 1.7rem;
+        font-size: 1.1rem;
+    }
+    .github {
+        width: 8rem;
+        padding: .2rem;
+        font-size: 1rem;
+    }
+    .main {
+        color: white;
+        padding: 5% 0 0 10%;
+    }
+    #title span {
+        font-size: 5.5rem;
+    }
+    #text {
+        width: 70%;
+        font-size: 2.5rem;
     }
 }
 
