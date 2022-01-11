@@ -337,9 +337,6 @@ a {
         line-height: 1.7rem;
         font-size: 1.1rem;
     }
-    .main {
-        padding: 0 0 0 10%;
-    }
     #title span {
         font-size: 400%;
     }
@@ -361,6 +358,7 @@ a {
         display: block;
     }
     .main {
+        display: block;
         padding: 0;
         text-align: center;
         margin-top: 13%;
