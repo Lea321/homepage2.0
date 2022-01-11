@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(https://cdn.jsdelivr.net/gh/Lea321/lea_img/img/post/bg1.jpg);
+    background-image: url(../img/bg1.jpg);
     background-position: center;
     background-repeat: repeat-y;
     background-size: cover;
@@ -200,7 +200,6 @@ a {
 }
 
 .bibi,
-.photo,
 .about_body {
     text-align: center;
     width: 50%;
@@ -233,102 +232,6 @@ a {
 
 .xk-footer {
     display: none;
-}
-
-
-/* 弹窗显示 */
-
-#Big {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    background-color: rgba(80, 79, 79, 0.774);
-}
-
-.big_c {
-    margin-top: -2rem;
-    text-align: center;
-    width: 70%;
-}
-
-.big_c img {
-    min-width: 40%;
-    max-width: 80%;
-    max-height: 70vh;
-    border: .5rem white solid;
-}
-
-.text {
-    margin-bottom: .5rem;
-    color: white;
-    letter-spacing: 1rem;
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
-}
-
-
-/* 切换图片按钮 */
-
-#button-right,
-#button-left {
-    position: fixed;
-    top: 45vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10vh;
-    height: 10vh;
-    z-index: 5;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .3);
-    font-size: 5rem;
-    color: white;
-}
-
-#button-right {
-    right: 10%;
-}
-
-#button-left {
-    left: 10%;
-}
-
-
-/* 相册 */
-
-.imgbox {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.imgbox span {
-    margin-top: 1rem;
-    border-radius: .5rem;
-    overflow: hidden;
-    width: 24%;
-    height: 9rem;
-    box-shadow: 0 0 .3rem .1rem rgba(0, 0, 0, .3);
-}
-
-.imgbox span img {
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.imgbox span:hover {
-    box-shadow: 0px .8rem 1rem rgba(0, 0, 0, .5);
-    transition: 0.5s;
-    transform: scale(1.2, 1.2);
 }
 
 .about_body {
@@ -399,30 +302,6 @@ a {
     text-align: center;
 }
 
-.github {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    margin: auto auto .5rem auto;
-    height: 1.5rem;
-    border-radius: 2rem;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: .2rem;
-    color: black;
-    font-size: 1.3rem
-}
-
-.github:hover {
-    transition: .5s;
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.github img {
-    height: 100%;
-    margin-right: .5rem;
-}
-
 
 /* 自适应 */
 
@@ -442,27 +321,18 @@ a {
     #text {
         width: 90%;
     }
-    .imgbox span {
-        width: 31%;
-        height: 6rem;
-    }
     .footer,
     .page-footer {
         letter-spacing: 0.1rem;
         line-height: 1.7rem;
         font-size: 1.1rem;
     }
-    .github {
-        width: 8rem;
-        padding: .2rem;
-        font-size: 1rem;
-    }
     .main {
         color: white;
         padding: 5% 0 0 10%;
     }
     #title span {
-        font-size: 5.5rem;
+        font-size: 3.5rem;
     }
     #text {
         width: 70%;
@@ -570,11 +440,6 @@ a {
         line-height: 1.3rem;
         font-size: 1rem;
     }
-    .github {
-        width: 8rem;
-        padding: .2rem;
-        font-size: 1rem;
-    }
     .m-nav_c {
         width: 100%;
         display: none;
@@ -586,8 +451,7 @@ a {
         background-color: rgba(0, 0, 0, 0.3);
     }
     .bibi,
-    .about_body,
-    .photo {
+    .about_body {
         margin-top: 10%;
         width: 80%;
         padding: 2rem 1rem 2rem 1rem;
@@ -605,17 +469,6 @@ a {
     .c_title {
         font-size: 1.1rem;
         padding-left: .5rem;
-    }
-    .big_c {
-        margin-top: -2rem;
-        text-align: center;
-        width: 100%;
-    }
-    .big_c img {
-        min-width: 40%;
-        max-width: 80%;
-        max-height: 70vh;
-        border: .5rem white solid;
     }
     .text {
         letter-spacing: .5rem;
