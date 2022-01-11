@@ -324,9 +324,6 @@ a {
 
 /* 自适应 */
 
-
-/* 自适应 */
-
 @media (min-width: 850px) and (max-width: 1150px) {
     #text {
         width: 90%;
