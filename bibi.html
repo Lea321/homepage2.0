@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>哔哔 - Lea's homepage - v2.0.0</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/script.js"></script>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
-    <!-- 播放器文件调用 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
-    <!-- 导航 -->
+    <!-- 电脑导航 -->
     <div class="nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
         <div class="nav_c">
@@ -33,7 +31,7 @@
     <!-- 手机导航 -->
     <div class="m-nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
-        <button onclick="mnav()"><i class="fas fa-align-justify"  title="菜单"></i> </button>
+        <button class="btn"><i class="fas fa-align-justify"  title="菜单"></i> </button>
     </div>
     <div class="m-nav_c" id="m-nav_c">
         <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
@@ -49,12 +47,7 @@
 
         <div id='speak'>
             </speak>
-            <!-- 使用markdown渲染 -->
-            <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
-            <!-- 不使用markdown渲染 -->
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
-            <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-            <!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script> -->
             <script>
                 ispeakBber
                     .init({
@@ -83,12 +76,6 @@
         <p> © 2021 by Lea.</p>
         <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
     </footer>
-
-
-    <!-- 播放器配置 -->
-    <meting-js server="tencent" type="playlist" autoplay="false" id="7903334636" volume=0.5 fixed="true">
-    </meting-js>
-
 
 </body>
 

@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lea's homepage - v2.0.0</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/script.js"></script>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
-    <!-- 播放器文件调用 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
-    <!-- <div class="dark"> -->
-    <!-- 导航 -->
+    <!-- 电脑导航 -->
     <div class="nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
         <div class="nav_c">
@@ -34,7 +31,7 @@
     <!-- 手机导航 -->
     <div class="m-nav">
         <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
-        <button onclick="mnav()"><i class="fas fa-align-justify"  title="菜单"></i> </button>
+        <button class="btn"><i class="fas fa-align-justify"  title="菜单"></i> </button>
     </div>
     <div class="m-nav_c" id="m-nav_c">
         <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
@@ -48,22 +45,7 @@
     <div class="main">
 
         <!-- 电脑文字 -->
-        <div id="title">
-            <span class="flip">L</span>
-            <span class="flip">e</span>
-            <span class="flip">a</span>
-            <span class="flip">'</span>
-            <span class="flip">s</span>
-            <br>
-            <span class="flip">H</span>
-            <span class="flip">o</span>
-            <span class="flip">m</span>
-            <span class="flip">e</span>
-            <span class="flip">p</span>
-            <span class="flip">a</span>
-            <span class="flip">g</span>
-            <span class="flip">e</span>
-        </div>
+        <div id="title"> </div>
 
         <!-- 手机文字头像 -->
         <div id="m-title">
@@ -80,17 +62,18 @@
 
         <!-- 电脑联系按钮 -->
         <div class="contact">
-            <a class="qq" href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> &nbsp;添加QQ</a>
-            <a class="wechat" href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> &nbsp;添加微信</a>
-            <a class="mail" href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> &nbsp;发送邮件</a>
+            <a href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"><span> 添加QQ</span></a>
+            <a href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> <span>添加微信</span></a>
+            <a href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> <span>发送邮件</span></a>
+            <a href="./about.html"><img src="./img/more.svg" alt="me"> <span>了解更多</span></a>
         </div>
 
         <!-- 手机联系按钮 -->
         <div class="m-contact">
-            <a class="qq" href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> &nbsp;Q Q</a>
-            <a class="wechat" href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> &nbsp;微 信</a>
-            <a class="mail" href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> &nbsp;邮 件</a>
-            <a class="me" href="./about.html"><img src="./img/me.svg" alt="me"> &nbsp;关 于</a>
+            <a href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> <span>Q Q</span></a>
+            <a href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> <span>微 信</span></a>
+            <a href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> <span>邮 件</span></a>
+            <a href="./about.html"><img src="./img/more.svg" alt="me"> <span>更 多</span></a>
         </div>
     </div>
 
@@ -101,57 +84,6 @@
         <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
     </footer>
 
-
-    <!-- </div> -->
-
-
-    <!-- 播放器配置 -->
-    <meting-js server="tencent" type="playlist" autoplay="true" id="7903334636" volume=0.5 fixed="true">
-    </meting-js>
-
-
 </body>
-
-
-<!-- 打字js -->
-<script>
-    document.querySelectorAll('span').forEach((span, index) => {
-        span.style.setProperty('--delay', `${index * 0.1}s`)
-    })
-    let d = document.getElementById('text')
-    let i = 0,
-        timer = 0,
-        line = 0;
-    str = ['Never forget to think!', '不积跬步，无以至千里；不积小流，无以成江海。', '世间本无事，庸人自扰之。', '好记性不如烂笔头。', '愿你走出半生，归来仍是少年。']
-    line = 0
-        // 输入
-    function typing() {
-        if (i < str[line].length) {
-            d.innerHTML = str[line].slice(0, i++)
-            setTimeout(typing, 200)
-        } else {
-            d.innerHTML = str[line]
-            setTimeout(re_typing, 2000)
-        }
-    }
-    // 删除
-    function re_typing() {
-        if (i > 0) {
-            d.innerHTML = str[line].slice(0, i--)
-            setTimeout(re_typing, 50)
-        } else {
-            if (line == str.length - 1) {
-                line = 0
-            } else {
-                line += 1
-            }
-            d.innerHTML = ''
-            setTimeout(typing, 1000)
-        }
-    }
-
-    typing()
-</script>
-
 
 </html>
