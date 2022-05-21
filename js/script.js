@@ -1,7 +1,7 @@
 $(() => {
     $('.m-nav_c').hide();
     // 动态添加元素
-    var title = "Lea's Homepage"
+    var title = "Leonus Homepage"
     for (let i = 0; i < title.length; i++) {
         var span = document.createElement('span')
         if (title.charAt(i) == ' ') {
@@ -53,5 +53,10 @@ $(() => {
 
     $('.btn').click(() => {
         $('.m-nav_c').slideToggle();
+        return false;
+    })
+
+    $('html').click(() => {
+        $('.m-nav_c').slideUp();
     })
 })

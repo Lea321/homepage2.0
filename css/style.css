@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(https://s4.ax1x.com/2022/02/28/bMcr4A.jpg);
+    background-image: url(https://cn.bing.com/th?id=OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg);
     background-position: center;
     /* background-repeat: repeat-y; */
     background-size: cover;
@@ -34,6 +34,19 @@ a {
 @font-face {
     font-family: 'Century Gothic';
     src: url(../font/GOTHIC.TTF);
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.gengduo {
+    height: 1.4rem;
+    width: 1.4rem;
 }
 
 
@@ -70,12 +83,10 @@ a {
 
 /* 导航logo */
 
-.logo {
-    height: 100%;
-}
-
-.logo img {
-    height: 100%;
+.nav .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 5px;
 }
 
 
@@ -150,21 +161,12 @@ a {
     align-items: center;
     justify-content: center;
     margin-right: 3rem;
-    width: 10rem;
+    /* width: 10rem; */
     height: 3rem;
-    padding: 0 .5rem;
+    padding: 0 1.5rem;
     border-radius: 2rem;
     animation: big 2s linear infinite;
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-.contact span {
-    margin-left: .5rem;
-    line-height: 3rem;
-}
-
-.contact img {
-    height: 1.7rem;
 }
 
 .contact a:hover {
@@ -172,16 +174,23 @@ a {
     transition: .3s;
 }
 
-.contact a:nth-child(3) img {
-    border-radius: .3rem;
+.contact span {
+    margin-left: .5rem;
+}
+
+.mail img {
+    width: 1.5rem;
+    border-radius: .4rem;
 }
 
 
 /* 哔哔 */
 
 .page-title {
-    height: 2.5rem;
-    margin-bottom: 1%;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
 }
 
 .bibi,
@@ -221,7 +230,6 @@ a {
 
 .about_body {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -235,29 +243,36 @@ a {
 }
 
 .content {
+    border: 2px dotted #555;
     width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 1rem;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
 }
 
 .c_title {
-    width: 100%;
-    font-family: 微软雅黑;
-    padding: .2rem 1rem;
+    box-sizing: border-box;
+    border-bottom: 2px dotted #555;
     text-align: left;
-    font-size: 1.1rem;
-    background-color: #b9d3ee;
-    border-left: .5rem solid #1874cd;
-    border-radius: .3rem;
-    box-shadow: 0 .2rem .2rem .1rem rgba(0, 0, 0, .3);
+    width: 100%;
+    padding: .5rem 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: .3rem;
+    /* border: 1px solid #000; */
+    /* background-color: #b9d3ee; */
+    /* border-left: .5rem solid #1874cd; */
+    /* border-radius: .3rem; */
+    /* box-shadow: 0 .2rem .2rem .1rem rgba(0, 0, 0, .3); */
 }
 
 .c_content {
-    line-height: 2rem;
-    width: 85%;
+    /* border: 1px solid #000; */
+    line-height: 1.6rem;
+    /* width: 85%; */
     text-align: left;
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 1rem 2rem;
 }
 
 
@@ -285,6 +300,36 @@ a {
     color: white;
     font-size: 1.2rem;
     text-align: center;
+}
+
+
+/* 美化滚动条 */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    width: 4px;
+    background: rgba(#101F1C, 0.1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(103, 177, 247);
+    background-clip: padding-box;
+    /* min-height: 10px; */
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    transition: background-color .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(140, 196, 248);
 }
 
 
@@ -341,16 +386,15 @@ a {
         align-items: center;
         justify-content: space-between;
     }
-    .logo {
-        height: 100%;
-        margin-left: .5rem;
+    .m-nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .logo img {
-        height: 100%;
-    }
-    .m-nav button {
-        width: 2.7rem;
-        height: 2.7rem;
+    .m-nav button,
+    .m-nav .logo {
+        width: 3rem;
+        height: 3rem;
         background: rgba(0, 0, 0, 0.4);
         background: none;
         color: white;
@@ -378,7 +422,7 @@ a {
     #m-title span {
         margin: .5rem 0 0 1rem;
         display: block;
-        font-size: 3.4rem;
+        font-size: 2.5rem;
         letter-spacing: .3rem;
     }
     #text {
@@ -397,22 +441,20 @@ a {
         margin-top: 1rem;
         font-size: 1rem;
         border-radius: .6rem;
-        width: 26%;
-        padding: .5rem 0;
+        /* width: 23%; */
+        padding: .5rem 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
         animation: big 2s linear infinite;
         background-color: rgba(0, 0, 0, 0.3);
     }
-    .m-contact img {
-        width: 1.7rem;
-    }
-    .m-contact a:nth-child(3) img {
-        border-radius: .3rem;
+    .mail img {
+        width: 1.5rem;
+        border-radius: .5rem;
     }
     .m-contact span {
-        margin-left: .5rem;
+        margin-left: .4rem;
     }
     .footer,
     .page-footer {

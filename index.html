@@ -4,40 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lea's homepage - v2.0.0</title>
+    <title>Leonus的主页</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <!-- <i class="iconfont icon-xxx"></i> -->
     <!-- jquery -->
-    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+    <script src="./js/jq.min.js"></script>
+    <script src="./font/iconfont.js"></script>
     <script src="./js/script.js"></script>
 </head>
 
 <body>
     <!-- 电脑导航 -->
     <div class="nav">
-        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+        <a class="logo" href="/"><i class="fas fa-home"  title="首页"></i> Home</a>
         <div class="nav_c">
-            <a href="./">首页</a>
-            <a href="./bibi.html">哔哔</a>
-            <a href="./1.0/index.html">v1.0</a>
-            <a href="https://blog.lea.ink/">博客</a>
-            <a href="./baidu">百度</a>
-            <button target="_self" class="about" onclick="window.location='./about.html'"> 关 于</button>
+            <a href="./">Home</a>
+            <a href="./bibi.html">Talk</a>
+            <a href="https://blog.leonus.cn">Blog</a>
+            <a href="./todo/">Todo</a>
+            <a href="http://movie.leonus.cn">Film</a>
+            <button target="_self" class="about" onclick="window.location='./about.html'">About</button>
         </div>
     </div>
 
     <!-- 手机导航 -->
     <div class="m-nav">
-        <a class="logo" href="/"><img src="./img/logo.png" alt="logo"></a>
-        <button class="btn"><i class="fas fa-align-justify"  title="菜单"></i> </button>
+        <a class="logo" href="/"><i class="fas fa-home"  title="首页"></i></a>
+        <button class="btn"><i class="fas fa-bars"  title="菜单"></i> </button>
     </div>
     <div class="m-nav_c" id="m-nav_c">
-        <a href="./bibi.html"><i class="fas fa-comment-dots"></i> 哔哔</a>
-        <a href="./1.0/index.html"><i class="fas fa-history"></i> v1.0</a>
-        <a href="https://blog.lea.ink/"><i class="fas fa-blog"></i> 博客</a>
-        <a href="./baidu"><i class="fas fa-search"></i> 百度</a>
+        <a href="./bibi.html"><i class="fas fa-comments"></i> Talk</a>
+        <a href="https://blog.leonus.cn/"><i class="fas fa-blog"></i> Blog</a>
+        <a href="./todo/"><i class="fas fa-clipboard-list"></i> Todo</a>
+        <a href="http://movie.leonus.cn"><i class="fas fa-film"></i> Film</a>
+        <a href="./about.html"><i class="fas fa-seedling"></i> About</a>
     </div>
 
 
@@ -54,7 +58,7 @@
                     <img src="https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5" alt="qq头像">
                 </a>
             </div>
-            <span>Lea.</span>
+            <span>Leonus.</span>
         </div>
 
         <!-- 打字 -->
@@ -62,25 +66,52 @@
 
         <!-- 电脑联系按钮 -->
         <div class="contact">
-            <a href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"><span> 添加QQ</span></a>
-            <a href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> <span>添加微信</span></a>
-            <a href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> <span>发送邮件</span></a>
-            <a href="./about.html"><img src="./img/more.svg" alt="me"> <span>了解更多</span></a>
+            <a href="https://res.abeim.cn/api/qq/?qq=553344777">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-QQ"></use></svg>
+                <span>Add Q Q</span>
+            </a>
+
+            <a href="./wechat.html">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg>
+                <span>Add Wechat</span>
+            </a>
+
+            <a href="mailto:553344777@qq.com" class="mail">
+                <img src="./img/mail.png" alt="qq">
+                <span>Send Email</span>
+            </a>
+
+            <!-- <a href="./about.html">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-wangzhanlianjiehulianwang"></use></svg>
+                <span>About Me</span>
+            </a> -->
         </div>
 
         <!-- 手机联系按钮 -->
         <div class="m-contact">
-            <a href="https://res.abeim.cn/api/qq/?qq=553344777"><img src="./img/QQ.svg" alt="qq"> <span>Q Q</span></a>
-            <a href="./wechat.html"><img src="./img/wecat.svg" alt="wechat"> <span>微 信</span></a>
-            <a href="mailto:553344777@qq.com"><img src="./img/mail.png" alt="mail"> <span>邮 件</span></a>
-            <a href="./about.html"><img src="./img/more.svg" alt="me"> <span>更 多</span></a>
+            <a href="https://res.abeim.cn/api/qq/?qq=553344777">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-QQ"></use></svg>
+                <span>Q Q</span>
+            </a>
+            <a href="./wechat.html">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg>
+                <span>Wechat</span>
+            </a>
+            <a href="mailto:553344777@qq.com" class="mail">
+                <img src="./img/mail.png" alt="mail">
+                <span>Email</span>
+            </a>
+            <a href="./about.html">
+                <svg class="icon gengduo" aria-hidden="true"><use xlink:href="#icon-a-wangzhanlianjiehulianwang"></use></svg>
+                <span>About</span>
+            </a>
         </div>
     </div>
 
 
     <!-- 页脚 -->
     <footer class="footer">
-        <p> © 2021 by Lea.</p>
+        <p> © 2021 by Leonus.</p>
         <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
     </footer>
 
