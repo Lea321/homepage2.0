@@ -1,21 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Century Gothic';
-}
-
 body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif!important;
     background-image: url(https://cn.bing.com/th?id=OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg);
     background-position: center;
-    /* background-repeat: repeat-y; */
+    background-repeat: no-repeat;
     background-size: cover;
-    /* position: relative; */
     background-attachment: fixed;
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }
 
 
@@ -23,88 +12,130 @@ a {
 
 .m-contact,
 .m-nav,
-.m-nav_c,
 #m-title {
     display: none;
-}
-
-
-/* 字体 */
-
-@font-face {
-    font-family: 'Century Gothic';
-    src: url(../font/GOTHIC.TTF);
-}
-
-.icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-
-.gengduo {
-    height: 1.4rem;
-    width: 1.4rem;
 }
 
 
 /* 导航 */
 
 .nav {
-    font-family: 'Courier New', Courier, monospace;
-    height: 4rem;
+    height: 5rem;
     padding: 0 2rem;
+    font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-/* 导航栏 */
-
-.nav_c {
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-}
-
+.nav .logo,
 .nav_c a {
-    border-radius: 1rem;
-    padding: .2rem 1rem;
+    border-radius: 10rem;
+    padding: .5rem 1.5rem;
+    transition: .2s ease-in-out;
 }
 
+.nav .logo:hover,
 .nav_c a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: 1s;
+    background-color: rgba(170, 170, 170, 0.5);
 }
 
 
 /* 导航logo */
 
 .nav .logo {
-    font-size: 1.7rem;
+    display: flex;
+    font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 5px;
+}
+
+.nav .logo i {
+    margin: 2px 8px 0 0;
+    font-size: 1.5rem;
+}
+
+.m-nav {
+    display: none;
+    justify-content: space-between;
+}
+
+.m-nav a {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 5px;
+}
+
+.m-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.m-nav_c {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+}
+
+.m-left {
+    position: absolute;
+    padding: 20px 10px;
+    width: 230px;
+    left: -230px;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.m-left a {
+    display: block;
+    color: #555;
+    height: 100%;
+    line-height: 2rem;
+    padding: 10px 0 10px 15px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.m-left li {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.m-left a:hover {
+    background-color: rgba(111, 111, 111, 0.3);
+}
+
+.m-left a:active {
+    background-color: #1f2937 !important;
+    color: white;
+}
+
+.m-right {
+    flex: 1;
+    height: 100vh;
 }
 
 
 /* 关于我按钮 */
 
 .about {
-    cursor: pointer;
-    color: white;
-    font-size: 1.3rem;
-    padding: .2rem 1.2rem;
-    border-radius: 1rem;
-    border: 0;
-    background-color: rgb(34, 179, 204, .6);
+    background-color: rgb(34, 179, 204, .5);
 }
 
 .about:hover {
     transition: .5s;
-    background-color: rgba(0, 217, 255, 0.7);
+    background-color: rgba(0, 217, 255, 0.7) !important;
 }
 
 
@@ -113,9 +144,6 @@ a {
 .main {
     display: flex;
     height: 75vh;
-    /* border: 1px solid red; */
-    color: white;
-    /* align-content: center; */
     justify-content: center;
     flex-direction: column;
     padding-left: 10%;
@@ -123,12 +151,11 @@ a {
 
 #title {
     cursor: pointer;
-    width: 40rem;
 }
 
 #title span {
     margin: 0;
-    font-size: 500%;
+    font-size: 5rem;
     display: inline-block;
     animation: 5s flip infinite;
     animation-delay: var(--delay);
@@ -137,8 +164,8 @@ a {
 #text {
     width: 70%;
     cursor: pointer;
-    margin-top: 1rem;
-    font-size: 3rem;
+    margin: 2rem 0 3rem 0;
+    font-size: 3.5rem;
     letter-spacing: .5rem;
 }
 
@@ -147,54 +174,71 @@ a {
     animation: blink 1s infinite;
 }
 
+.qqtx {
+    width: 7rem;
+    height: 7rem;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 0 .35rem rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.qqtx img {
+    transition: 1s;
+    width: 100%;
+}
+
+.qqtx:hover img {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+#m-title span {
+    margin: .5rem 0 0 .5rem;
+    display: block;
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+}
+
 
 /* 联系按钮开始 */
 
 .contact {
-    margin-top: 2rem;
     display: flex;
 }
 
 .contact a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-right: 3rem;
-    /* width: 10rem; */
     height: 3rem;
-    padding: 0 1.5rem;
-    border-radius: 2rem;
+    padding: .5rem 2rem;
+    border-radius: 5rem;
     animation: big 2s linear infinite;
     background-color: rgba(0, 0, 0, 0.3);
+    transition: .3s;
+}
+
+svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .5rem;
 }
 
 .contact a:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    transition: .3s;
-}
-
-.contact span {
-    margin-left: .5rem;
-}
-
-.mail img {
-    width: 1.5rem;
-    border-radius: .4rem;
 }
 
 
-/* 哔哔 */
+/* 关于 */
 
-.page-title {
-    font-size: 2.5rem;
-    letter-spacing: .5rem;
-    font-weight: 400;
-    margin-bottom: .5rem;
-}
-
-.bibi,
 .about_body {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     width: 50%;
     border-radius: 1rem;
@@ -208,47 +252,10 @@ a {
     font-size: 1.3rem;
 }
 
-
-/* 哔哔微调 */
-
-.xk-card-content {
-    text-align: left;
-}
-
-.xk-card-content a {
-    white-space: initial;
-}
-
-.xk-card-content img {
-    width: 50%;
-    margin: 2px auto;
-}
-
-.xk-footer {
-    display: none;
-}
-
-.about_body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about_body a {
-    color: #00688B;
-}
-
-.about_body a:hover {
-    color: purple;
-}
-
 .content {
     border: 2px dotted #555;
     width: 80%;
     margin: 1rem;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
 }
 
 .c_title {
@@ -260,19 +267,30 @@ a {
     font-size: 1.3rem;
     line-height: 1.5rem;
     letter-spacing: .3rem;
-    /* border: 1px solid #000; */
-    /* background-color: #b9d3ee; */
-    /* border-left: .5rem solid #1874cd; */
-    /* border-radius: .3rem; */
-    /* box-shadow: 0 .2rem .2rem .1rem rgba(0, 0, 0, .3); */
 }
 
 .c_content {
-    /* border: 1px solid #000; */
     line-height: 1.6rem;
-    /* width: 85%; */
     text-align: left;
     margin: .5rem 0 1rem 2rem;
+}
+
+.m-contact {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.m-contact a {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border-radius: .6rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    animation: big 2s linear infinite;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -282,11 +300,7 @@ a {
     width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0;
-    font-family: 'sans-serif';
-    letter-spacing: 0.3rem;
-    line-height: 2.2rem;
-    color: white;
+    padding: 10px 0;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -345,9 +359,6 @@ a {
 /* 自适应 */
 
 @media (min-width: 850px) and (max-width: 1150px) {
-    #text {
-        width: 90%;
-    }
     .footer,
     .page-footer {
         letter-spacing: 0.1rem;
@@ -355,11 +366,11 @@ a {
         font-size: 1.1rem;
     }
     #title span {
-        font-size: 400%;
+        font-size: 4.5rem;
     }
     #text {
-        width: 70%;
-        font-size: 2.5rem;
+        width: 90%;
+        font-size: 2.8rem;
     }
 }
 
@@ -370,6 +381,11 @@ a {
     .contact {
         display: none;
     }
+    .m-contact,
+    .m-nav,
+    .m-nav a {
+        display: flex;
+    }
     /* 显示 */
     #m-title {
         display: block;
@@ -378,52 +394,7 @@ a {
         display: block;
         padding: 0;
         text-align: center;
-        margin-top: 20%;
-    }
-    .m-nav {
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .m-nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .m-nav button,
-    .m-nav .logo {
-        width: 3rem;
-        height: 3rem;
-        background: rgba(0, 0, 0, 0.4);
-        background: none;
-        color: white;
-        border: none;
-        font-size: 1.3rem;
-        cursor: pointer;
-    }
-    .qqtx {
-        width: 7rem;
-        height: 7rem;
-        margin: auto;
-        overflow: hidden;
-        box-shadow: 0 0 0 .35rem rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-    }
-    .qqtx img {
-        transition: 1s;
-        width: 100%;
-    }
-    .qqtx:hover img {
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-    #m-title span {
-        margin: .5rem 0 0 1rem;
-        display: block;
-        font-size: 2.5rem;
-        letter-spacing: .3rem;
+        margin-top: 15%;
     }
     #text {
         width: 90%;
@@ -431,51 +402,15 @@ a {
         font-size: 1.5rem;
         letter-spacing: .3rem;
     }
-    .m-contact {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .m-contact a {
-        margin-top: 1rem;
-        font-size: 1rem;
-        border-radius: .6rem;
-        /* width: 23%; */
-        padding: .5rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: big 2s linear infinite;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    .mail img {
-        width: 1.5rem;
-        border-radius: .5rem;
-    }
-    .m-contact span {
-        margin-left: .4rem;
-    }
     .footer,
     .page-footer {
         letter-spacing: 0.1rem;
         line-height: 1.3rem;
         font-size: 1rem;
     }
-    .m-nav_c {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 2rem;
-        /* border-radius: .5rem; */
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-    .bibi,
     .about_body {
         margin-top: 12%;
-        width: 80%;
+        width: 90%;
         padding: 2rem 1rem 2rem 1rem;
     }
     .page-sub {

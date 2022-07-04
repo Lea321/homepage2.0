@@ -1,5 +1,4 @@
 $(() => {
-    $('.m-nav_c').hide();
     // 动态添加元素
     var title = "Leonus Homepage"
     for (let i = 0; i < title.length; i++) {
@@ -51,12 +50,17 @@ $(() => {
     typing();
 
 
-    $('.btn').click(() => {
-        $('.m-nav_c').slideToggle();
+    $('#menu').click(() => {
+        $('.m-nav_c').css("display", 'flex');
+        $(".m-left").animate({ left: "0" });
         return false;
     })
 
-    $('html').click(() => {
-        $('.m-nav_c').slideUp();
+    $('.m-right').click(() => {
+        $(".m-left").animate({ left: "-230px" }, () => {
+            $('.m-nav_c').css("display", 'none');
+        });
+
+        return false;
     })
 })

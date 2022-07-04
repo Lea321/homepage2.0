@@ -4,43 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于 - Lea's homepage - v2.0.0</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Leonus的主页</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
-    <!-- jquery -->
-    <script src="./js/jq.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="/js/jq.min.js"></script>
+    <script src="/js/iconfont.js"></script>
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
     <!-- 电脑导航 -->
     <div class="nav">
-        <a class="logo" href="/"><i class="fas fa-home"  title="首页"></i> Home</a>
+        <a class="logo" href="/">
+            <i class="fa-solid fa-house" title="首页"></i>
+            <span>Home</span>
+        </a>
         <div class="nav_c">
-            <a href="./">Home</a>
-            <a href="./bibi.html">Talk</a>
             <a href="https://blog.leonus.cn">Blog</a>
-            <a href="./todo/">Todo</a>
-            <a href="http://movie.leonus.cn">Film</a>
-            <button target="_self" class="about" onclick="window.location='./about.html'">About</button>
+            <a href="/todo/">Todo</a>
+            <a href="http://movie.leonus.cn">Movie</a>
+            <a class="about" href="/about.html">About</a>
         </div>
     </div>
 
     <!-- 手机导航 -->
     <div class="m-nav">
         <a class="logo" href="/"><i class="fas fa-home"  title="首页"></i></a>
-        <button class="btn"><i class="fas fa-bars"  title="菜单"></i> </button>
+        <a class="btn" href="javascript:;"><i class="fa-solid fa-align-justify"></i> </a>
     </div>
     <div class="m-nav_c" id="m-nav_c">
-        <a href="./bibi.html"><i class="fas fa-comments"></i> Talk</a>
-        <a href="https://blog.leonus.cn/"><i class="fas fa-blog"></i> Blog</a>
-        <a href="./todo/"><i class="fas fa-clipboard-list"></i> Todo</a>
-        <a href="http://movie.leonus.cn"><i class="fas fa-film"></i> Film</a>
-        <a href="./about.html"><i class="fas fa-seedling"></i> About</a>
+
+        <ul class="m-left">
+            <li>
+                <a href="https://blog.leonus.cn/">My Blog</a>
+            </li>
+            <li>
+                <a href="/todo/">Todo List</a>
+            </li>
+            <li>
+                <a href="http://movie.leonus.cn">Free Movie</a>
+            </li>
+            <li>
+                <a href="/about.html">About Me</a>
+            </li>
+        </ul>
+
+        <div class="m-right"></div>
     </div>
+
 
     <!-- 主体 -->
     <div class="about_body">
